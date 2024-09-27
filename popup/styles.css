@@ -1,5 +1,5 @@
 /* General styling */
-.btn-popup{
+.popup-btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,8 +43,6 @@ button {
   opacity: 0;
   z-index: 10;
   transition: all 0.5s ease;
-  overflow-y: auto; /* Add scroll for overflow content */
-  max-height: 90vh; /* Ensure popup does not go beyond view height */
 }
 
 /* Form headings */
@@ -58,15 +56,13 @@ button {
 /* Close button styling */
 .close-popup {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 32px;
-  color: #555;
+  font-size: 24px;
+  color:black ;
   cursor: pointer;
-  padding: 5px;
-  z-index: 100;
 }
 
 .close-popup:hover {
@@ -78,7 +74,7 @@ button {
 .popup input[type="number"],
 .popup input[type="file"] {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin-bottom: 15px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -95,7 +91,7 @@ button {
 }
 
 /* Next button and Submit button */
-.btn-next {
+.btn-popup {
   background-color: #007bff;
   border: none;
   padding: 12px 20px;
@@ -107,7 +103,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-next:hover {
+.btn-popup:hover {
   background-color: #0056b3;
   transform: translateY(-2px); /* Slight lift on hover */
 }
@@ -133,7 +129,7 @@ button {
 /* Media query for responsiveness */
 @media (max-width: 600px) {
   .popup {
-      width: 95%;
+      width: 100%;
       padding: 20px;
   }
 
@@ -141,19 +137,6 @@ button {
   .popup input[type="number"],
   .popup input[type="file"] {
       font-size: 14px;
-  }
-
-  .popup h2 {
-      font-size: 18px;
-  }
-  .header-popup{
-    display: flex;
-    justify-content: space-between;
-  }
-  .close-popup {
-      top: 12px;
-      right: 20px;
-      font-size: 24px;
   }
 
   button {
