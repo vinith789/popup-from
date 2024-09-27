@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="btn-popup">
+    <button id="open-popup">Open Form</button>
+    </div>
+
+    <!-- Popup Step 1 -->
+    <div id="popup-step1" class="popup">
+        <form id="form-step1">
+            <div class="header-popup">
+                <h2>Step 1: Enter Personal Information</h2>
+                <button type="button" class="close-popup">×</button> <!-- Close button -->
+             </div>
+            <input type="text" placeholder="Enter your name" required>
+            <input type="number" placeholder="Enter your age" required>
+            <input type="text" placeholder="Enter your school/college" required>
+            <button type="button" id="next-step1" class="btn-next">Next</button>
+        </form>
+    </div>
+
+    <!-- Popup Step 2 -->
+    <div id="popup-step2" class="popup">
+        <form id="form-step2">
+            <button type="button" class="close-popup">×</button> <!-- Close button -->
+            <h2>Step 2: Upload Images</h2>
+            <input type="file" id="imageUpload" multiple required>
+            <div id="imagePreview"></div>
+            <button type="button" class="btn-next" id="next-step2">Next</button>
+        </form>
+    </div>
+
+    <!-- Popup Step 3 (Final) -->
+    <div id="popup-step3" class="popup">
+        <form id="form-step3">
+            <button type="button" class="close-popup">×</button> <!-- Close button -->
+            <h2>Step 3: Enter Family Information</h2>
+            <input type="text" placeholder="Enter mother's name" required>
+            <input type="text" placeholder="Enter father's name" required>
+            <input type="text" placeholder="Enter sister's name">
+            <input type="text" placeholder="Enter brother's name">
+            <button type="submit" >Submit</button>
+        </form>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

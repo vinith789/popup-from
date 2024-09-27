@@ -1,0 +1,162 @@
+/* General styling */
+.btn-popup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Open form button styling */
+#open-popup {
+  margin-top: 100px;
+  font-size: 18px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+#open-popup:hover {
+  background: linear-gradient(45deg, #218838, #19692c);
+  transform: scale(1.05);
+}
+
+/* Popup container styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  z-index: 10;
+  transition: all 0.5s ease;
+  overflow-y: auto; /* Add scroll for overflow content */
+  max-height: 90vh; /* Ensure popup does not go beyond view height */
+}
+
+/* Form headings */
+.popup h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Close button styling */
+.close-popup {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+}
+
+.close-popup:hover {
+  color: red;
+}
+
+/* Input fields styling */
+.popup input[type="text"],
+.popup input[type="number"],
+.popup input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.popup input[type="text"]:focus,
+.popup input[type="number"]:focus,
+.popup input[type="file"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+/* Next button and Submit button */
+.btn-next {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-next:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Image preview styling */
+#imagePreview {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#imagePreview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid #007bff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .popup {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .popup input[type="text"],
+  .popup input[type="number"],
+  .popup input[type="file"] {
+      font-size: 14px;
+  }
+
+  .popup h2 {
+      font-size: 18px;
+  }
+  .header-popup{
+    display: flex;
+    justify-content: space-between;
+  }
+  .close-popup {
+      top: 12px;
+      right: 20px;
+      font-size: 24px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
