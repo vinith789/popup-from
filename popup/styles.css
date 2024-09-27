@@ -4,11 +4,9 @@
   justify-content: center;
   align-items: center;
 }
-
 button {
   cursor: pointer;
 }
-
 /* Open form button styling */
 #open-popup {
   margin-top: 100px;
@@ -129,7 +127,7 @@ button {
 /* Media query for responsiveness */
 @media (max-width: 600px) {
   .popup {
-      width: 95%;
+      width: 90%;
       padding: 20px;
   }
 

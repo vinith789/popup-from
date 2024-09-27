@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const popups = document.querySelectorAll('.popup');
     const imageUpload = document.getElementById('imageUpload');
     const imagePreview = document.getElementById('imagePreview');
-
     // Open the popup form
     openPopupButton.addEventListener('click', function () {
         document.getElementById('popup-step1').style.display = 'block';
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Move to next step
+    // Move to the next step
     document.getElementById('next-step1').addEventListener('click', function () {
         document.getElementById('popup-step1').style.display = 'none';
         document.getElementById('popup-step2').style.display = 'block';
@@ -32,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('popup-step2').style.display = 'none';
         document.getElementById('popup-step3').style.display = 'block';
         document.getElementById('popup-step3').style.opacity = '1';
+    });
+
+    // Back to previous step
+    document.getElementById('prev-step2').addEventListener('click', function () {
+        document.getElementById('popup-step2').style.display = 'none';
+        document.getElementById('popup-step1').style.display = 'block';
+        document.getElementById('popup-step1').style.opacity = '1';
+    });
+
+    document.getElementById('prev-step3').addEventListener('click', function () {
+        document.getElementById('popup-step3').style.display = 'none';
+        document.getElementById('popup-step2').style.display = 'block';
+        document.getElementById('popup-step2').style.opacity = '1';
     });
 
     // Handle image upload and preview
@@ -45,13 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (file.type.startsWith('image/')) {
                 const reader = new FileReader();
-
                 reader.onload = function (e) {
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
                     imagePreview.appendChild(imgElement);
                 };
-
                 reader.readAsDataURL(file);
             }
         }
