@@ -129,7 +129,7 @@ button {
 /* Media query for responsiveness */
 @media (max-width: 600px) {
   .popup {
-      width: 100%;
+      width: 85%;
       padding: 20px;
   }
 
